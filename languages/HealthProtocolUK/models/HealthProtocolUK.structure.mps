@@ -29,9 +29,13 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
+      <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
+        <reference id="1169127628841" name="intfc" index="PrY4T" />
+      </concept>
       <concept id="1071489090640" name="jetbrains.mps.lang.structure.structure.ConceptDeclaration" flags="ig" index="1TIwiD">
         <property id="1096454100552" name="rootable" index="19KtqR" />
         <reference id="1071489389519" name="extends" index="1TJDcQ" />
+        <child id="1169129564478" name="implements" index="PzmwI" />
       </concept>
       <concept id="1071489288299" name="jetbrains.mps.lang.structure.structure.PropertyDeclaration" flags="ig" index="1TJgyi">
         <property id="241647608299431129" name="propertyId" index="IQ2nx" />
@@ -85,6 +89,12 @@
       <property role="TrG5h" value="reference" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="PrWs8" id="G_VAxmOWV2" role="PzmwI">
+      <ref role="PrY4T" to="tpee:hCUYCKd" resolve="IValidIdentifier" />
+    </node>
+    <node concept="PrWs8" id="G_VAxmOWV5" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7kF5EQsvVoN">
     <property role="EcuMT" value="8442866861346895411" />
@@ -116,6 +126,9 @@
     <property role="3GE5qa" value="measurement" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="G_VAxmP5a2" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7kF5EQsw3S$">
     <property role="EcuMT" value="8442866861346930212" />
@@ -222,6 +235,9 @@
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <property role="20kJfa" value="mappings" />
       <ref role="20lvS9" node="7kF5EQsw3SG" resolve="MeasurementType2UnitMapping" />
+    </node>
+    <node concept="PrWs8" id="G_VAxmPb2J" role="PzmwI">
+      <ref role="PrY4T" to="tpee:hCUYCKd" resolve="IValidIdentifier" />
     </node>
   </node>
   <node concept="1TIwiD" id="7kF5EQsw3TK">
@@ -353,6 +369,11 @@
     <property role="3GE5qa" value="evaluation" />
     <property role="TrG5h" value="IntegerConstant" />
     <ref role="1TJDcQ" node="6lbBAKUpgAp" resolve="Operand" />
+    <node concept="1TJgyi" id="6lbBAKUpi6w" role="1TKVEl">
+      <property role="IQ2nx" value="7299101808757383584" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6lbBAKUpi6y">
     <property role="EcuMT" value="7299101808757383586" />
