@@ -244,42 +244,49 @@
     <property role="EcuMT" value="8442866861346930288" />
     <property role="3GE5qa" value="measurement" />
     <property role="TrG5h" value="WeightMeasurement" />
+    <property role="34LRSv" value="weight" />
     <ref role="1TJDcQ" node="7kF5EQsw3Sz" resolve="Measurement" />
   </node>
   <node concept="1TIwiD" id="7kF5EQsw3TL">
     <property role="EcuMT" value="8442866861346930289" />
     <property role="3GE5qa" value="measurement" />
     <property role="TrG5h" value="TemperatureMeasurement" />
+    <property role="34LRSv" value="temperature" />
     <ref role="1TJDcQ" node="7kF5EQsw3Sz" resolve="Measurement" />
   </node>
   <node concept="1TIwiD" id="7kF5EQsw3TM">
     <property role="EcuMT" value="8442866861346930290" />
     <property role="3GE5qa" value="measurement" />
     <property role="TrG5h" value="SystolicPressureMeasurement" />
+    <property role="34LRSv" value="systolic pressure" />
     <ref role="1TJDcQ" node="7kF5EQsw3Sz" resolve="Measurement" />
   </node>
   <node concept="1TIwiD" id="7kF5EQsw3TN">
     <property role="EcuMT" value="8442866861346930291" />
     <property role="3GE5qa" value="measurement" />
     <property role="TrG5h" value="PulseMeasurement" />
+    <property role="34LRSv" value="pulse" />
     <ref role="1TJDcQ" node="7kF5EQsw3Sz" resolve="Measurement" />
   </node>
   <node concept="1TIwiD" id="7kF5EQsw3TO">
     <property role="EcuMT" value="8442866861346930292" />
     <property role="3GE5qa" value="measurement" />
     <property role="TrG5h" value="GlucoseMeasurement" />
+    <property role="34LRSv" value="glucose" />
     <ref role="1TJDcQ" node="7kF5EQsw3Sz" resolve="Measurement" />
   </node>
   <node concept="1TIwiD" id="27rf3QUBPBu">
     <property role="EcuMT" value="2439609858972932574" />
     <property role="3GE5qa" value="measurement" />
     <property role="TrG5h" value="DiastolicPressureMeasurement" />
+    <property role="34LRSv" value="diastolic pressure" />
     <ref role="1TJDcQ" node="7kF5EQsw3Sz" resolve="Measurement" />
   </node>
   <node concept="1TIwiD" id="27rf3QUBPBv">
     <property role="EcuMT" value="2439609858972932575" />
     <property role="3GE5qa" value="measurement" />
     <property role="TrG5h" value="BloodPressureMeasurement" />
+    <property role="34LRSv" value="blood pressure" />
     <ref role="1TJDcQ" node="7kF5EQsw3Sz" resolve="Measurement" />
   </node>
   <node concept="1TIwiD" id="27rf3QUBPBw">
@@ -320,15 +327,17 @@
       <property role="20kJfa" value="action" />
       <ref role="20lvS9" node="6lbBAKUpfTG" resolve="AddReminderAction" />
     </node>
+    <node concept="1TJgyj" id="2P7m58bdJW5" role="1TKVEi">
+      <property role="IQ2ns" value="3262673564451929861" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="outputstatus" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2P7m58bdnEm" resolve="OutputStatus" />
+    </node>
     <node concept="1TJgyi" id="6lbBAKUpfTn" role="1TKVEl">
       <property role="IQ2nx" value="7299101808757374551" />
       <property role="TrG5h" value="result" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="1TJgyi" id="27rf3QUBPJ8" role="1TKVEl">
-      <property role="IQ2nx" value="2439609858972933064" />
-      <property role="TrG5h" value="status" />
-      <ref role="AX2Wp" node="6lbBAKUpfTu" resolve="OutputStatusEnum" />
     </node>
   </node>
   <node concept="1TIwiD" id="6lbBAKUpgAp">
@@ -516,6 +525,41 @@
       <property role="TrG5h" value="type" />
       <ref role="AX2Wp" node="6lbBAKUpfTJ" resolve="ReminderTypeEnum" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="2P7m58bdnEm">
+    <property role="EcuMT" value="3262673564451830422" />
+    <property role="3GE5qa" value="evaluation.output.OutputStatus" />
+    <property role="TrG5h" value="OutputStatus" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="2P7m58bdnEr">
+    <property role="EcuMT" value="3262673564451830427" />
+    <property role="3GE5qa" value="evaluation.output.OutputStatus" />
+    <property role="TrG5h" value="AskMedicalHelpOutputStatus" />
+    <property role="34LRSv" value="Ask for medical help" />
+    <ref role="1TJDcQ" node="2P7m58bdnEm" resolve="OutputStatus" />
+  </node>
+  <node concept="1TIwiD" id="2P7m58bdnEq">
+    <property role="EcuMT" value="3262673564451830426" />
+    <property role="3GE5qa" value="evaluation.output.OutputStatus" />
+    <property role="TrG5h" value="CheckRiskFactorsOutputStatus" />
+    <property role="34LRSv" value="Check risk factors" />
+    <ref role="1TJDcQ" node="2P7m58bdnEm" resolve="OutputStatus" />
+  </node>
+  <node concept="1TIwiD" id="2P7m58bdnEn">
+    <property role="EcuMT" value="3262673564451830423" />
+    <property role="3GE5qa" value="evaluation.output.OutputStatus" />
+    <property role="TrG5h" value="GoodOutputStatus" />
+    <property role="34LRSv" value="Good" />
+    <ref role="1TJDcQ" node="2P7m58bdnEm" resolve="OutputStatus" />
+  </node>
+  <node concept="1TIwiD" id="2P7m58bdnEp">
+    <property role="EcuMT" value="3262673564451830425" />
+    <property role="3GE5qa" value="evaluation.output.OutputStatus" />
+    <property role="TrG5h" value="NormalOutputStatus" />
+    <property role="34LRSv" value="Normal" />
+    <ref role="1TJDcQ" node="2P7m58bdnEm" resolve="OutputStatus" />
   </node>
 </model>
 

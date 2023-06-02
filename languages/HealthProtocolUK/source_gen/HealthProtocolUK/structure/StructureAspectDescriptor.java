@@ -17,11 +17,14 @@ import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAddReminderAction = createDescriptorForAddReminderAction();
+  /*package*/ final ConceptDescriptor myConceptAskMedicalHelpOutputStatus = createDescriptorForAskMedicalHelpOutputStatus();
   /*package*/ final ConceptDescriptor myConceptBloodPressureMeasurement = createDescriptorForBloodPressureMeasurement();
+  /*package*/ final ConceptDescriptor myConceptCheckRiskFactorsOutputStatus = createDescriptorForCheckRiskFactorsOutputStatus();
   /*package*/ final ConceptDescriptor myConceptDiastolicPressureMeasurement = createDescriptorForDiastolicPressureMeasurement();
   /*package*/ final ConceptDescriptor myConceptEvaluationEntry = createDescriptorForEvaluationEntry();
   /*package*/ final ConceptDescriptor myConceptFloatConstant = createDescriptorForFloatConstant();
   /*package*/ final ConceptDescriptor myConceptGlucoseMeasurement = createDescriptorForGlucoseMeasurement();
+  /*package*/ final ConceptDescriptor myConceptGoodOutputStatus = createDescriptorForGoodOutputStatus();
   /*package*/ final ConceptDescriptor myConceptInputSpec = createDescriptorForInputSpec();
   /*package*/ final ConceptDescriptor myConceptIntegerConstant = createDescriptorForIntegerConstant();
   /*package*/ final ConceptDescriptor myConceptLessOrEqualUnaryOperator = createDescriptorForLessOrEqualUnaryOperator();
@@ -37,9 +40,11 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptMeasurementUnitConfig = createDescriptorForMeasurementUnitConfig();
   /*package*/ final ConceptDescriptor myConceptMoreOrEqualUnaryOperator = createDescriptorForMoreOrEqualUnaryOperator();
   /*package*/ final ConceptDescriptor myConceptMoreUnaryOperator = createDescriptorForMoreUnaryOperator();
+  /*package*/ final ConceptDescriptor myConceptNormalOutputStatus = createDescriptorForNormalOutputStatus();
   /*package*/ final ConceptDescriptor myConceptOperand = createDescriptorForOperand();
   /*package*/ final ConceptDescriptor myConceptOperator = createDescriptorForOperator();
   /*package*/ final ConceptDescriptor myConceptOutputResult = createDescriptorForOutputResult();
+  /*package*/ final ConceptDescriptor myConceptOutputStatus = createDescriptorForOutputStatus();
   /*package*/ final ConceptDescriptor myConceptProtocolUK = createDescriptorForProtocolUK();
   /*package*/ final ConceptDescriptor myConceptPulseMeasurement = createDescriptorForPulseMeasurement();
   /*package*/ final ConceptDescriptor myConceptSystolicPressureMeasurement = createDescriptorForSystolicPressureMeasurement();
@@ -63,7 +68,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAddReminderAction, myConceptBloodPressureMeasurement, myConceptDiastolicPressureMeasurement, myConceptEvaluationEntry, myConceptFloatConstant, myConceptGlucoseMeasurement, myConceptInputSpec, myConceptIntegerConstant, myConceptLessOrEqualUnaryOperator, myConceptLessUnaryOperator, myConceptMeasurement, myConceptMeasurementBinaryOperator, myConceptMeasurementOperand, myConceptMeasurementOperandAdapter, myConceptMeasurementRange, myConceptMeasurementRangeOperator, myConceptMeasurementType2UnitMapping, myConceptMeasurementUnaryOperator, myConceptMeasurementUnitConfig, myConceptMoreOrEqualUnaryOperator, myConceptMoreUnaryOperator, myConceptOperand, myConceptOperator, myConceptOutputResult, myConceptProtocolUK, myConceptPulseMeasurement, myConceptSystolicPressureMeasurement, myConceptTemperatureMeasurement, myConceptWeightMeasurement);
+    return Arrays.asList(myConceptAddReminderAction, myConceptAskMedicalHelpOutputStatus, myConceptBloodPressureMeasurement, myConceptCheckRiskFactorsOutputStatus, myConceptDiastolicPressureMeasurement, myConceptEvaluationEntry, myConceptFloatConstant, myConceptGlucoseMeasurement, myConceptGoodOutputStatus, myConceptInputSpec, myConceptIntegerConstant, myConceptLessOrEqualUnaryOperator, myConceptLessUnaryOperator, myConceptMeasurement, myConceptMeasurementBinaryOperator, myConceptMeasurementOperand, myConceptMeasurementOperandAdapter, myConceptMeasurementRange, myConceptMeasurementRangeOperator, myConceptMeasurementType2UnitMapping, myConceptMeasurementUnaryOperator, myConceptMeasurementUnitConfig, myConceptMoreOrEqualUnaryOperator, myConceptMoreUnaryOperator, myConceptNormalOutputStatus, myConceptOperand, myConceptOperator, myConceptOutputResult, myConceptOutputStatus, myConceptProtocolUK, myConceptPulseMeasurement, myConceptSystolicPressureMeasurement, myConceptTemperatureMeasurement, myConceptWeightMeasurement);
   }
 
   @Override
@@ -72,8 +77,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myIndexSwitch.index(id)) {
       case LanguageConceptSwitch.AddReminderAction:
         return myConceptAddReminderAction;
+      case LanguageConceptSwitch.AskMedicalHelpOutputStatus:
+        return myConceptAskMedicalHelpOutputStatus;
       case LanguageConceptSwitch.BloodPressureMeasurement:
         return myConceptBloodPressureMeasurement;
+      case LanguageConceptSwitch.CheckRiskFactorsOutputStatus:
+        return myConceptCheckRiskFactorsOutputStatus;
       case LanguageConceptSwitch.DiastolicPressureMeasurement:
         return myConceptDiastolicPressureMeasurement;
       case LanguageConceptSwitch.EvaluationEntry:
@@ -82,6 +91,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptFloatConstant;
       case LanguageConceptSwitch.GlucoseMeasurement:
         return myConceptGlucoseMeasurement;
+      case LanguageConceptSwitch.GoodOutputStatus:
+        return myConceptGoodOutputStatus;
       case LanguageConceptSwitch.InputSpec:
         return myConceptInputSpec;
       case LanguageConceptSwitch.IntegerConstant:
@@ -112,12 +123,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptMoreOrEqualUnaryOperator;
       case LanguageConceptSwitch.MoreUnaryOperator:
         return myConceptMoreUnaryOperator;
+      case LanguageConceptSwitch.NormalOutputStatus:
+        return myConceptNormalOutputStatus;
       case LanguageConceptSwitch.Operand:
         return myConceptOperand;
       case LanguageConceptSwitch.Operator:
         return myConceptOperator;
       case LanguageConceptSwitch.OutputResult:
         return myConceptOutputResult;
+      case LanguageConceptSwitch.OutputStatus:
+        return myConceptOutputStatus;
       case LanguageConceptSwitch.ProtocolUK:
         return myConceptProtocolUK;
       case LanguageConceptSwitch.PulseMeasurement:
@@ -150,12 +165,31 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("type", 0x654b9e6c3a64fe6dL).type(MetaIdFactory.dataTypeId(0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x654b9e6c3a64fe6fL)).origin("7299101808757374573").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForAskMedicalHelpOutputStatus() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("HealthProtocolUK", "AskMedicalHelpOutputStatus", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x2d4758520b357a9bL);
+    b.class_(false, false, false);
+    b.super_("HealthProtocolUK.structure.OutputStatus", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x2d4758520b357a96L);
+    b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/3262673564451830427");
+    b.version(2);
+    b.alias("Ask for medical help");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForBloodPressureMeasurement() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("HealthProtocolUK", "BloodPressureMeasurement", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x21db3c3dba9f59dfL);
     b.class_(false, false, false);
     b.super_("HealthProtocolUK.structure.Measurement", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c803e23L);
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/2439609858972932575");
     b.version(2);
+    b.alias("blood pressure");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForCheckRiskFactorsOutputStatus() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("HealthProtocolUK", "CheckRiskFactorsOutputStatus", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x2d4758520b357a9aL);
+    b.class_(false, false, false);
+    b.super_("HealthProtocolUK.structure.OutputStatus", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x2d4758520b357a96L);
+    b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/3262673564451830426");
+    b.version(2);
+    b.alias("Check risk factors");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDiastolicPressureMeasurement() {
@@ -164,6 +198,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("HealthProtocolUK.structure.Measurement", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c803e23L);
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/2439609858972932574");
     b.version(2);
+    b.alias("diastolic pressure");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForEvaluationEntry() {
@@ -190,6 +225,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("HealthProtocolUK.structure.Measurement", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c803e23L);
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/8442866861346930292");
     b.version(2);
+    b.alias("glucose");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForGoodOutputStatus() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("HealthProtocolUK", "GoodOutputStatus", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x2d4758520b357a97L);
+    b.class_(false, false, false);
+    b.super_("HealthProtocolUK.structure.OutputStatus", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x2d4758520b357a96L);
+    b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/3262673564451830423");
+    b.version(2);
+    b.alias("Good");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForInputSpec() {
@@ -209,6 +254,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("HealthProtocolUK.structure.Operand", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x654b9e6c3a650999L);
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/7299101808757383583");
     b.version(2);
+    b.property("value", 0x654b9e6c3a6521a0L).type(PrimitiveTypeId.INTEGER).origin("7299101808757383584").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForLessOrEqualUnaryOperator() {
@@ -232,6 +278,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForMeasurement() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("HealthProtocolUK", "Measurement", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c803e23L);
     b.class_(false, true, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/8442866861346930211");
     b.version(2);
     return b.create();
@@ -304,6 +351,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForMeasurementUnitConfig() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("HealthProtocolUK", "MeasurementUnitConfig", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c803e6dL);
     b.class_(false, false, true);
+    b.parent(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x11a3afa8c0dL);
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/8442866861346930285");
     b.version(2);
     b.aggregate("mappings", 0x752b16ad9c803e6eL).target(0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c803e2cL).optional(false).ordered(true).multiple(true).origin("8442866861346930286").done();
@@ -327,6 +375,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias(">");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForNormalOutputStatus() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("HealthProtocolUK", "NormalOutputStatus", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x2d4758520b357a99L);
+    b.class_(false, false, false);
+    b.super_("HealthProtocolUK.structure.OutputStatus", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x2d4758520b357a96L);
+    b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/3262673564451830425");
+    b.version(2);
+    b.alias("Normal");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForOperand() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("HealthProtocolUK", "Operand", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x654b9e6c3a650999L);
     b.class_(false, true, false);
@@ -347,13 +404,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/2439609858972932583");
     b.version(2);
     b.property("result", 0x654b9e6c3a64fe57L).type(PrimitiveTypeId.STRING).origin("7299101808757374551").done();
-    b.property("status", 0x21db3c3dba9f5bc8L).type(MetaIdFactory.dataTypeId(0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x654b9e6c3a64fe5eL)).origin("2439609858972933064").done();
     b.aggregate("action", 0x654b9e6c3a64fe5cL).target(0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x654b9e6c3a64fe6cL).optional(true).ordered(true).multiple(false).origin("7299101808757374556").done();
+    b.aggregate("outputstatus", 0x2d4758520b36ff05L).target(0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x2d4758520b357a96L).optional(false).ordered(true).multiple(false).origin("3262673564451929861").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOutputStatus() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("HealthProtocolUK", "OutputStatus", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x2d4758520b357a96L);
+    b.class_(false, true, false);
+    b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/3262673564451830422");
+    b.version(2);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForProtocolUK() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("HealthProtocolUK", "ProtocolUK", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c7fb62dL);
     b.class_(false, false, true);
+    b.parent(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x11a3afa8c0dL);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/8442866861346895405");
     b.version(2);
     b.property("description", 0x752b16ad9c7fb62eL).type(PrimitiveTypeId.STRING).origin("8442866861346895406").done();
@@ -369,6 +435,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("HealthProtocolUK.structure.Measurement", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c803e23L);
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/8442866861346930291");
     b.version(2);
+    b.alias("pulse");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSystolicPressureMeasurement() {
@@ -377,6 +444,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("HealthProtocolUK.structure.Measurement", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c803e23L);
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/8442866861346930290");
     b.version(2);
+    b.alias("systolic pressure");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTemperatureMeasurement() {
@@ -385,6 +453,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("HealthProtocolUK.structure.Measurement", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c803e23L);
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/8442866861346930289");
     b.version(2);
+    b.alias("temperature");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForWeightMeasurement() {
@@ -393,6 +462,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("HealthProtocolUK.structure.Measurement", 0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c803e23L);
     b.origin("r:78547a60-8242-4ad0-8b5f-7fb3e8bb1328(HealthProtocolUK.structure)/8442866861346930288");
     b.version(2);
+    b.alias("weight");
     return b.create();
   }
 }

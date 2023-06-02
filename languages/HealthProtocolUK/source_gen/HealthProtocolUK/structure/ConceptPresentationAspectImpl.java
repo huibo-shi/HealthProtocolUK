@@ -10,11 +10,14 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_AddReminderAction;
+  private ConceptPresentation props_AskMedicalHelpOutputStatus;
   private ConceptPresentation props_BloodPressureMeasurement;
+  private ConceptPresentation props_CheckRiskFactorsOutputStatus;
   private ConceptPresentation props_DiastolicPressureMeasurement;
   private ConceptPresentation props_EvaluationEntry;
   private ConceptPresentation props_FloatConstant;
   private ConceptPresentation props_GlucoseMeasurement;
+  private ConceptPresentation props_GoodOutputStatus;
   private ConceptPresentation props_InputSpec;
   private ConceptPresentation props_IntegerConstant;
   private ConceptPresentation props_LessOrEqualUnaryOperator;
@@ -30,9 +33,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_MeasurementUnitConfig;
   private ConceptPresentation props_MoreOrEqualUnaryOperator;
   private ConceptPresentation props_MoreUnaryOperator;
+  private ConceptPresentation props_NormalOutputStatus;
   private ConceptPresentation props_Operand;
   private ConceptPresentation props_Operator;
   private ConceptPresentation props_OutputResult;
+  private ConceptPresentation props_OutputStatus;
   private ConceptPresentation props_ProtocolUK;
   private ConceptPresentation props_PulseMeasurement;
   private ConceptPresentation props_SystolicPressureMeasurement;
@@ -51,17 +56,31 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AddReminderAction = cpb.create();
         }
         return props_AddReminderAction;
+      case LanguageConceptSwitch.AskMedicalHelpOutputStatus:
+        if (props_AskMedicalHelpOutputStatus == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Ask for medical help");
+          props_AskMedicalHelpOutputStatus = cpb.create();
+        }
+        return props_AskMedicalHelpOutputStatus;
       case LanguageConceptSwitch.BloodPressureMeasurement:
         if (props_BloodPressureMeasurement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("BloodPressureMeasurement");
+          cpb.presentationByName();
           props_BloodPressureMeasurement = cpb.create();
         }
         return props_BloodPressureMeasurement;
+      case LanguageConceptSwitch.CheckRiskFactorsOutputStatus:
+        if (props_CheckRiskFactorsOutputStatus == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Check risk factors");
+          props_CheckRiskFactorsOutputStatus = cpb.create();
+        }
+        return props_CheckRiskFactorsOutputStatus;
       case LanguageConceptSwitch.DiastolicPressureMeasurement:
         if (props_DiastolicPressureMeasurement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("DiastolicPressureMeasurement");
+          cpb.presentationByName();
           props_DiastolicPressureMeasurement = cpb.create();
         }
         return props_DiastolicPressureMeasurement;
@@ -82,10 +101,17 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.GlucoseMeasurement:
         if (props_GlucoseMeasurement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("GlucoseMeasurement");
+          cpb.presentationByName();
           props_GlucoseMeasurement = cpb.create();
         }
         return props_GlucoseMeasurement;
+      case LanguageConceptSwitch.GoodOutputStatus:
+        if (props_GoodOutputStatus == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Good");
+          props_GoodOutputStatus = cpb.create();
+        }
+        return props_GoodOutputStatus;
       case LanguageConceptSwitch.InputSpec:
         if (props_InputSpec == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -170,7 +196,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.MeasurementUnitConfig:
         if (props_MeasurementUnitConfig == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("MeasurementUnitConfig");
+          cpb.presentationByName();
           props_MeasurementUnitConfig = cpb.create();
         }
         return props_MeasurementUnitConfig;
@@ -188,6 +214,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_MoreUnaryOperator = cpb.create();
         }
         return props_MoreUnaryOperator;
+      case LanguageConceptSwitch.NormalOutputStatus:
+        if (props_NormalOutputStatus == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Normal");
+          props_NormalOutputStatus = cpb.create();
+        }
+        return props_NormalOutputStatus;
       case LanguageConceptSwitch.Operand:
         if (props_Operand == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -207,39 +240,45 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OutputResult = cpb.create();
         }
         return props_OutputResult;
+      case LanguageConceptSwitch.OutputStatus:
+        if (props_OutputStatus == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_OutputStatus = cpb.create();
+        }
+        return props_OutputStatus;
       case LanguageConceptSwitch.ProtocolUK:
         if (props_ProtocolUK == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("protocol uk");
-          cpb.rawPresentation("protocol uk");
+          cpb.presentationByName();
           props_ProtocolUK = cpb.create();
         }
         return props_ProtocolUK;
       case LanguageConceptSwitch.PulseMeasurement:
         if (props_PulseMeasurement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("PulseMeasurement");
+          cpb.presentationByName();
           props_PulseMeasurement = cpb.create();
         }
         return props_PulseMeasurement;
       case LanguageConceptSwitch.SystolicPressureMeasurement:
         if (props_SystolicPressureMeasurement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("SystolicPressureMeasurement");
+          cpb.presentationByName();
           props_SystolicPressureMeasurement = cpb.create();
         }
         return props_SystolicPressureMeasurement;
       case LanguageConceptSwitch.TemperatureMeasurement:
         if (props_TemperatureMeasurement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("TemperatureMeasurement");
+          cpb.presentationByName();
           props_TemperatureMeasurement = cpb.create();
         }
         return props_TemperatureMeasurement;
       case LanguageConceptSwitch.WeightMeasurement:
         if (props_WeightMeasurement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("WeightMeasurement");
+          cpb.presentationByName();
           props_WeightMeasurement = cpb.create();
         }
         return props_WeightMeasurement;
