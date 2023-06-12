@@ -8,6 +8,7 @@
   <registry>
     <language id="0270a52d-288a-4279-ba12-6f9a2781f5f4" name="HealthProtocolUK">
       <concept id="2439609858972932583" name="HealthProtocolUK.structure.OutputResult" flags="ng" index="2rh6nq">
+        <property id="7299101808757374551" name="result" index="1vbQ0V" />
         <child id="3262673564451929861" name="outputstatus" index="Asqtn" />
       </concept>
       <concept id="2439609858972932577" name="HealthProtocolUK.structure.Operator" flags="ng" index="2rh6ns" />
@@ -18,6 +19,7 @@
       <concept id="2439609858972932575" name="HealthProtocolUK.structure.BloodPressureMeasurement" flags="ng" index="2rh6ny" />
       <concept id="2439609858972932574" name="HealthProtocolUK.structure.DiastolicPressureMeasurement" flags="ng" index="2rh6nz" />
       <concept id="3262673564451830422" name="HealthProtocolUK.structure.OutputStatus" flags="ng" index="Asyb4" />
+      <concept id="3262673564451830423" name="HealthProtocolUK.structure.GoodOutputStatus" flags="ng" index="Asyb5" />
       <concept id="7299101808757380443" name="HealthProtocolUK.structure.MeasurementOperandAdapter" flags="ng" index="1vbCGR">
         <child id="7299101808757380444" name="operand" index="1vbCGK" />
       </concept>
@@ -28,17 +30,19 @@
       <concept id="7299101808757383583" name="HealthProtocolUK.structure.IntegerConstant" flags="ng" index="1vbFZN">
         <property id="7299101808757383584" name="value" index="1vbFZc" />
       </concept>
-      <concept id="7299101808757383579" name="HealthProtocolUK.structure.MoreUnaryOperator" flags="ng" index="1vbFZR" />
       <concept id="7299101808757383570" name="HealthProtocolUK.structure.MeasurementUnaryOperator" flags="ng" index="1vbFZY">
         <child id="7299101808757383571" name="operand" index="1vbFZZ" />
       </concept>
       <concept id="8442866861346895405" name="HealthProtocolUK.structure.ProtocolUK" flags="ng" index="3Dla20">
+        <property id="6720060656559331174" name="link" index="1i3AjQ" />
         <property id="8442866861346895406" name="description" index="3Dla23" />
         <property id="8442866861346895408" name="reference" index="3Dla2t" />
         <child id="8442866861346930213" name="inputSpecs" index="3DEMy8" />
         <child id="8442866861346930215" name="eval" index="3DEMya" />
       </concept>
       <concept id="8442866861346895411" name="HealthProtocolUK.structure.InputSpec" flags="ng" index="3Dla2u">
+        <property id="8442866861346895412" name="timeRange" index="3Dla2p" />
+        <property id="8442866861346895414" name="size" index="3Dla2r" />
         <child id="8442866861346930218" name="measure" index="3DEMy7" />
       </concept>
       <concept id="8442866861346930220" name="HealthProtocolUK.structure.MeasurementType2UnitMapping" flags="ng" index="3DEMy1">
@@ -49,7 +53,6 @@
         <child id="2439609858972932584" name="output" index="2rh6nl" />
         <child id="7299101808757374538" name="range" index="1vbQ0A" />
       </concept>
-      <concept id="8442866861346930211" name="HealthProtocolUK.structure.Measurement" flags="ng" index="3DEMye" />
       <concept id="8442866861346930285" name="HealthProtocolUK.structure.MeasurementUnitConfig" flags="ng" index="3DEMz0">
         <child id="8442866861346930286" name="mappings" index="3DEMz3" />
       </concept>
@@ -57,7 +60,6 @@
       <concept id="8442866861346930289" name="HealthProtocolUK.structure.TemperatureMeasurement" flags="ng" index="3DEMzs" />
       <concept id="8442866861346930288" name="HealthProtocolUK.structure.WeightMeasurement" flags="ng" index="3DEMzt" />
       <concept id="8442866861346930291" name="HealthProtocolUK.structure.PulseMeasurement" flags="ng" index="3DEMzu" />
-      <concept id="8442866861346930290" name="HealthProtocolUK.structure.SystolicPressureMeasurement" flags="ng" index="3DEMzv" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -69,9 +71,19 @@
     <property role="TrG5h" value="DiabetesUK" />
     <property role="3Dla23" value="This is the diabetes protocol for UK" />
     <property role="3Dla2t" value="https://" />
+    <property role="1i3AjQ" value="false" />
     <node concept="3Dla2u" id="18Zf5Cvek$T" role="3DEMy8">
+      <property role="3Dla2r" value="10" />
+      <property role="3Dla2p" value="10" />
       <node concept="2rh6ny" id="18Zf5Cvek$X" role="3DEMy7">
         <property role="TrG5h" value="blood pressure" />
+      </node>
+    </node>
+    <node concept="3Dla2u" id="2nWjdsR_B$6" role="3DEMy8">
+      <property role="3Dla2r" value="10" />
+      <property role="3Dla2p" value="10" />
+      <node concept="3DEMzp" id="2nWjdsR_B_h" role="3DEMy7">
+        <property role="TrG5h" value="glucose" />
       </node>
     </node>
     <node concept="3DEMy9" id="18Zf5Cvek_6" role="3DEMya">
@@ -88,33 +100,20 @@
           <property role="TrG5h" value="diastolic pressure" />
         </node>
       </node>
-      <node concept="2rh6nq" id="18Zf5Cvek_a" role="2rh6nl" />
+      <node concept="2rh6nq" id="18Zf5Cvek_a" role="2rh6nl">
+        <property role="1vbQ0V" value="ddss" />
+        <node concept="Asyb5" id="5P2sT0fke0c" role="Asqtn" />
+      </node>
     </node>
-    <node concept="3DEMy9" id="18Zf5Cvek_q" role="3DEMya">
-      <node concept="2rh6nt" id="18Zf5Cvek_r" role="1vbQ0A">
-        <node concept="1vbFZR" id="18Zf5CveLGW" role="2rh6nv">
-          <node concept="1vbCGR" id="18Zf5CveLH2" role="1vbFZZ">
-            <property role="3ZjGdb" value="4LDewmN9gjg/BEATS_PER_MINUTE" />
-            <node concept="1vbFZN" id="18Zf5CveLH8" role="1vbCGK">
-              <property role="1vbFZc" value="222" />
-            </node>
-          </node>
-        </node>
-        <node concept="3DEMzv" id="18Zf5Cvek_F" role="2rh6np">
-          <property role="TrG5h" value="systolic pressure" />
+    <node concept="3DEMy9" id="5P2sT0fnztM" role="3DEMya">
+      <node concept="2rh6nt" id="5P2sT0fnztN" role="1vbQ0A">
+        <node concept="2rh6ns" id="5P2sT0fnztO" role="2rh6nv" />
+        <node concept="3DEMzp" id="5P2sT0fnzua" role="2rh6np">
+          <property role="TrG5h" value="glucose" />
         </node>
       </node>
-      <node concept="2rh6nq" id="18Zf5Cvek_u" role="2rh6nl" />
-    </node>
-    <node concept="3DEMy9" id="18Zf5CveLGy" role="3DEMya">
-      <node concept="2rh6nt" id="18Zf5CveLGz" role="1vbQ0A">
-        <node concept="2rh6ns" id="18Zf5CveLG$" role="2rh6nv" />
-        <node concept="3DEMye" id="18Zf5CveLG_" role="2rh6np">
-          <property role="TrG5h" value="" />
-        </node>
-      </node>
-      <node concept="2rh6nq" id="18Zf5CveLGA" role="2rh6nl">
-        <node concept="Asyb4" id="18Zf5CveLGB" role="Asqtn" />
+      <node concept="2rh6nq" id="5P2sT0fnztQ" role="2rh6nl">
+        <node concept="Asyb4" id="5P2sT0fnztR" role="Asqtn" />
       </node>
     </node>
   </node>

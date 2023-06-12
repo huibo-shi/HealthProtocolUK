@@ -424,6 +424,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("description", 0x752b16ad9c7fb62eL).type(PrimitiveTypeId.STRING).origin("8442866861346895406").done();
     b.property("reference", 0x752b16ad9c7fb630L).type(PrimitiveTypeId.STRING).origin("8442866861346895408").done();
+    b.property("link", 0x5d4273900f4c1766L).type(PrimitiveTypeId.BOOLEAN).origin("6720060656559331174").done();
     b.aggregate("inputSpecs", 0x752b16ad9c803e25L).target(0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c7fb633L).optional(false).ordered(true).multiple(true).origin("8442866861346930213").done();
     b.aggregate("eval", 0x752b16ad9c803e27L).target(0x270a52d288a4279L, 0xba126f9a2781f5f4L, 0x752b16ad9c803e24L).optional(true).ordered(true).multiple(true).origin("8442866861346930215").done();
     b.alias("protocol uk");
