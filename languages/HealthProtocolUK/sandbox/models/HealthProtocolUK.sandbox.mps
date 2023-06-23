@@ -11,7 +11,6 @@
         <property id="7299101808757374551" name="result" index="1vbQ0V" />
         <child id="3262673564451929861" name="outputstatus" index="Asqtn" />
       </concept>
-      <concept id="2439609858972932577" name="HealthProtocolUK.structure.Operator" flags="ng" index="2rh6ns" />
       <concept id="2439609858972932576" name="HealthProtocolUK.structure.MeasurementRange" flags="ng" index="2rh6nt">
         <child id="2439609858972932580" name="measurement" index="2rh6np" />
         <child id="2439609858972932578" name="rangeOperator" index="2rh6nv" />
@@ -72,6 +71,13 @@
     <property role="3Dla23" value="This is the diabetes protocol for UK" />
     <property role="3Dla2t" value="https://" />
     <property role="1i3AjQ" value="false" />
+    <node concept="3Dla2u" id="29ve4NrbxuW" role="3DEMy8">
+      <property role="3Dla2r" value="10" />
+      <property role="3Dla2p" value="10" />
+      <node concept="3DEMzu" id="29ve4Nrbxv4" role="3DEMy7">
+        <property role="TrG5h" value="pulse" />
+      </node>
+    </node>
     <node concept="3Dla2u" id="18Zf5Cvek$T" role="3DEMy8">
       <property role="3Dla2r" value="10" />
       <property role="3Dla2p" value="10" />
@@ -84,6 +90,24 @@
       <property role="3Dla2p" value="10" />
       <node concept="3DEMzp" id="2nWjdsR_B_h" role="3DEMy7">
         <property role="TrG5h" value="glucose" />
+      </node>
+    </node>
+    <node concept="3DEMy9" id="5P2sT0fnztM" role="3DEMya">
+      <node concept="2rh6nt" id="5P2sT0fnztN" role="1vbQ0A">
+        <node concept="1vbFZL" id="29ve4Nrbxv7" role="2rh6nv">
+          <node concept="1vbCGR" id="29ve4Nrbxvd" role="1vbFZZ">
+            <property role="3ZjGdb" value="6lbBAKUpdBD/MOL_PER_LITRE" />
+            <node concept="1vbFZN" id="29ve4Nrbxvh" role="1vbCGK">
+              <property role="1vbFZc" value="12" />
+            </node>
+          </node>
+        </node>
+        <node concept="3DEMzp" id="5P2sT0fnzua" role="2rh6np">
+          <property role="TrG5h" value="glucose" />
+        </node>
+      </node>
+      <node concept="2rh6nq" id="5P2sT0fnztQ" role="2rh6nl">
+        <node concept="Asyb4" id="5P2sT0fnztR" role="Asqtn" />
       </node>
     </node>
     <node concept="3DEMy9" id="18Zf5Cvek_6" role="3DEMya">
@@ -103,17 +127,6 @@
       <node concept="2rh6nq" id="18Zf5Cvek_a" role="2rh6nl">
         <property role="1vbQ0V" value="ddss" />
         <node concept="Asyb5" id="5P2sT0fke0c" role="Asqtn" />
-      </node>
-    </node>
-    <node concept="3DEMy9" id="5P2sT0fnztM" role="3DEMya">
-      <node concept="2rh6nt" id="5P2sT0fnztN" role="1vbQ0A">
-        <node concept="2rh6ns" id="5P2sT0fnztO" role="2rh6nv" />
-        <node concept="3DEMzp" id="5P2sT0fnzua" role="2rh6np">
-          <property role="TrG5h" value="glucose" />
-        </node>
-      </node>
-      <node concept="2rh6nq" id="5P2sT0fnztQ" role="2rh6nl">
-        <node concept="Asyb4" id="5P2sT0fnztR" role="Asqtn" />
       </node>
     </node>
   </node>
